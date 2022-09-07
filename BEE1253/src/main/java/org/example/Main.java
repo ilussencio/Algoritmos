@@ -16,10 +16,15 @@ public class Main {
             StringBuilder cifra = new StringBuilder();
 
             for(int j = 0; j < frase.length(); j++){
-                if(frase.charAt(j) == 'Z')
-                    cifra.append('A');
-                else
-                    cifra.append(Character.toString(frase.charAt(j)+n));
+                char aux = frase.charAt(j);
+                for(int k = 0; k < n; k ++){
+                    if(aux == 65)
+                        aux = 90;
+                    else
+                        aux -= 1;
+                }
+
+                cifra.append(Character.toString(aux));
             }
             System.out.println(cifra);
         }
