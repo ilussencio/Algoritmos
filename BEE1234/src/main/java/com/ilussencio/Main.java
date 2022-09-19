@@ -6,12 +6,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(System.in);
-        while(scan.hasNextLine()){
+        while (scan.hasNextLine()) {
             String novaFrase = "";
             int aux = 0;
             String frase = scan.nextLine();
 
-            for(int i = 0; i < frase.length(); i ++) {
+            for (int i = 0; i < frase.length(); i++) {
                 if (frase.charAt(i) == 32) {
                     novaFrase += " ";
                 } else if (aux % 2 == 0) {
@@ -24,6 +24,5 @@ public class Main {
             }
             System.out.println(novaFrase);
         }
-
     }
 }
